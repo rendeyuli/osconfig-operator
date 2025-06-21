@@ -1,0 +1,9 @@
+apiVersion: sysconfig.rendeyuli.osconfig/v1alpha1
+kind: NodeConfig
+metadata:
+  labels:
+    app.kubernetes.io/name: osconfig-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: nodeconfig-sample
+spec:
+  # TODO(user): Add fields here
