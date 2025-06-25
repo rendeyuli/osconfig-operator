@@ -30,12 +30,20 @@ type NodeConfigSpec struct {
 
 	// Foo is an example field of NodeConfig. Edit nodeconfig_types.go to remove/update
 	Foo string `json:"foo,omitempty"`
+
+	// 用于选择目标 Node 的标签选择器
+	NodeSelector map[string]string `json:"nodeSelector,omitempty"`
+
+	Data map[string]string `json:"data,omitempty"`
 }
 
 // NodeConfigStatus defines the observed state of NodeConfig.
 type NodeConfigStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+
+	//AppliedNodes 存储已成功应用配置的节点名称列表
+	AppliedNodes []string `json:"appliedNodes,omitempty"`
 }
 
 // +kubebuilder:object:root=true
