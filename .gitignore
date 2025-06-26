@@ -25,3 +25,11 @@ go.work
 *.swp
 *.swo
 *~
+
+# 忽略 agent 目录下的二进制文件
+agent/agent
+
+# 如果你希望忽略 agent 目录下其他临时文件，也可以写：
+agent/*.exe
+agent/*.out
+agent/*.log
